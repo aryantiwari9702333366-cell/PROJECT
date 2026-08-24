@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Studennt Login</h1>
+            <p>Login to register for your examination</p>
+
+            <form onsubmit="LoginUser(event)">
+                <input type="text" id="rollno" placeholder="Enter Roll Number" required>
+
+                <input type="password" id="password" placeholder="Enter password" required>
+
+                <button type="submit">Login</button> 
+            </form>
+            <button onclick="location.href='index.html'">
+                back to home
+            </button>
+
+        </div>
+
+        <script>
+            function LoginUser(event) {
+                event.preventDefault();
+
+                let rollno = document.getElementById("rollno").value;
+                let password = document.getElementById("password").value;
+
+                if(rollno !== "" && password !== "") {
+                    alert("Login Successful!");
+                    window.location.href = "registration.html"
+                               }
+            }
+        </script>
+    </body>
+</html>
